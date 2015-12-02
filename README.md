@@ -13,6 +13,7 @@ CFSecurityCodeButton是一个简约的验证码按钮。
 # 安装
 将CFSecurityCodeButton.h、CFSecurityCodeButton.m拖入你的项目中
 
+
 # 使用
 1. 创建
 	通过主题色创建一个CFSecurityCodeButton
