@@ -1,5 +1,6 @@
 # 简介
 CFSecurityCodeButton是一个简约的验证码按钮。
+
 ![CFSecurityCodeButton演示](http://7xnrog.com1.z0.glb.clouddn.com/github_iOS-CFSecurityCodeButton-show.gif)
 
 # 功能
@@ -18,12 +19,12 @@ CFSecurityCodeButton是一个简约的验证码按钮。
 1. 创建
 	通过主题色创建一个CFSecurityCodeButton
 
-	```
+	```objc
 	CFSecurityCodeButton *btSecurityCode_Blue = [[CFSecurityCodeButton alloc] initWithColor:CFColorDodgerBlue];
 	```
 	提供了一些颜色供使用者选择
 	
-	```
+	```objc
 	CFColorCoral
 	CFColorDodgerBlue
 	CFColorDeepSkyBlue
@@ -37,7 +38,7 @@ CFSecurityCodeButton是一个简约的验证码按钮。
 	如果没有设置，默认Normal状态会显示"发送验证码"，Disabled状态会显示"再次发送(倒计时)"
 	如果需要自定义可以设置`normalTitle`和`disabledTitle`属性
 	
-	```
+	```objc
 	btSecurityCode.normalTitle = @"自定义normal状态文字内容";
 	btSecurityCode.disabledTitle = @"自定义disabled状态文字内容";
 	```
@@ -47,7 +48,7 @@ CFSecurityCodeButton是一个简约的验证码按钮。
 	如果没有设置，默认倒计时为60秒
 	如果需要自定义可以设置`time`属性
 	
-	```
+	```objc
 	btSecurityCode.time = 60;
 	```
 
@@ -58,18 +59,18 @@ CFSecurityCodeButton是一个简约的验证码按钮。
 5. 代理
 	提供了两个代理方法监控按钮
 	
-	```
+	```objc
 	/**
 	 *  按钮被点击
 	 *
 	 *  @param securityCodeButton CFSecurityCodeButton对象
 	 */
 	- (void)securityCodeButtonDidClicked:(CFSecurityCodeButton *)securityCodeButton;
-/**
+	/**
 	 *  按钮倒计时结束
 	 *
 	 *  @param securityCodeButton CFSecurityCodeButton对象
- */
+	 */
 	- (void)securityCodeButtonTimingEnded:(CFSecurityCodeButton *)securityCodeButton;
 	```
 	只需要实现`CFSecurityCodeButtonDelegate`，重写代理方法
