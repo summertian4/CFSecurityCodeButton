@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		824543B51E5BE65300E69226 /* NSTimer+ZLYWeakTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 824543B41E5BE65300E69226 /* NSTimer+ZLYWeakTimer.m */; };
 		82A5329E1BF0BB0400A08DD0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A5329D1BF0BB0400A08DD0 /* main.m */; };
 		82A532A11BF0BB0400A08DD0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A532A01BF0BB0400A08DD0 /* AppDelegate.m */; };
 		82A532A41BF0BB0400A08DD0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A532A31BF0BB0400A08DD0 /* ViewController.m */; };
@@ -15,7 +16,7 @@
 		82A532AC1BF0BB0400A08DD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82A532AA1BF0BB0400A08DD0 /* LaunchScreen.storyboard */; };
 		82A532B71BF0BB0400A08DD0 /* CFSecurityCodeButtonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A532B61BF0BB0400A08DD0 /* CFSecurityCodeButtonTests.m */; };
 		82A532C21BF0BB0400A08DD0 /* CFSecurityCodeButtonUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A532C11BF0BB0400A08DD0 /* CFSecurityCodeButtonUITests.m */; };
-		82A532D51BF0BB5600A08DD0 /* CFSecurityCodeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A532D41BF0BB5600A08DD0 /* CFSecurityCodeButton.m */; settings = {ASSET_TAGS = (); }; };
+		82A532D51BF0BB5600A08DD0 /* CFSecurityCodeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A532D41BF0BB5600A08DD0 /* CFSecurityCodeButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		824543B31E5BE65300E69226 /* NSTimer+ZLYWeakTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+ZLYWeakTimer.h"; sourceTree = "<group>"; };
+		824543B41E5BE65300E69226 /* NSTimer+ZLYWeakTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+ZLYWeakTimer.m"; sourceTree = "<group>"; };
 		82A532991BF0BB0400A08DD0 /* CFSecurityCodeButton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CFSecurityCodeButton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82A5329D1BF0BB0400A08DD0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		82A5329F1BF0BB0400A08DD0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -105,9 +108,9 @@
 			isa = PBXGroup;
 			children = (
 				82A532CF1BF0BB1400A08DD0 /* CFSecurityCodeButton */,
-				82A532D11BF0BB2300A08DD0 /* controller */,
+				82A532D11BF0BB2300A08DD0 /* Controller */,
 				82A532D01BF0BB1C00A08DD0 /* view */,
-				82A532D21BF0BB2D00A08DD0 /* other */,
+				82A532D21BF0BB2D00A08DD0 /* Other */,
 				82A5329C1BF0BB0400A08DD0 /* Supporting Files */,
 			);
 			path = CFSecurityCodeButton;
@@ -144,6 +147,8 @@
 		82A532CF1BF0BB1400A08DD0 /* CFSecurityCodeButton */ = {
 			isa = PBXGroup;
 			children = (
+				824543B31E5BE65300E69226 /* NSTimer+ZLYWeakTimer.h */,
+				824543B41E5BE65300E69226 /* NSTimer+ZLYWeakTimer.m */,
 				82A532D31BF0BB5600A08DD0 /* CFSecurityCodeButton.h */,
 				82A532D41BF0BB5600A08DD0 /* CFSecurityCodeButton.m */,
 			);
@@ -159,22 +164,22 @@
 			name = view;
 			sourceTree = "<group>";
 		};
-		82A532D11BF0BB2300A08DD0 /* controller */ = {
+		82A532D11BF0BB2300A08DD0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				82A532A21BF0BB0400A08DD0 /* ViewController.h */,
 				82A532A31BF0BB0400A08DD0 /* ViewController.m */,
 			);
-			name = controller;
+			name = Controller;
 			sourceTree = "<group>";
 		};
-		82A532D21BF0BB2D00A08DD0 /* other */ = {
+		82A532D21BF0BB2D00A08DD0 /* Other */ = {
 			isa = PBXGroup;
 			children = (
 				82A5329F1BF0BB0400A08DD0 /* AppDelegate.h */,
 				82A532A01BF0BB0400A08DD0 /* AppDelegate.m */,
 			);
-			name = other;
+			name = Other;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				82A532A41BF0BB0400A08DD0 /* ViewController.m in Sources */,
+				824543B51E5BE65300E69226 /* NSTimer+ZLYWeakTimer.m in Sources */,
 				82A532D51BF0BB5600A08DD0 /* CFSecurityCodeButton.m in Sources */,
 				82A532A11BF0BB0400A08DD0 /* AppDelegate.m in Sources */,
 				82A5329E1BF0BB0400A08DD0 /* main.m in Sources */,
@@ -534,6 +540,7 @@
 				82A532C81BF0BB0400A08DD0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		82A532C91BF0BB0400A08DD0 /* Build configuration list for PBXNativeTarget "CFSecurityCodeButtonTests" */ = {
 			isa = XCConfigurationList;
@@ -542,6 +549,7 @@
 				82A532CB1BF0BB0400A08DD0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		82A532CC1BF0BB0400A08DD0 /* Build configuration list for PBXNativeTarget "CFSecurityCodeButtonUITests" */ = {
 			isa = XCConfigurationList;
@@ -550,6 +558,7 @@
 				82A532CE1BF0BB0400A08DD0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

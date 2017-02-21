@@ -7,13 +7,14 @@
 //
 
 #import "CFSecurityCodeButton.h"
+#import "NSTimer+ZLYWeakTimer.h"
 
-#pragma mark ========================宏定义========================
+#pragma mark ========================Define========================
 
 #define CFSecurityCodeButtonFont [UIFont boldSystemFontOfSize:12]
 #define CFSecurityCodeButtonTitleColorDark CFColor(50, 50, 50, 1)
 
-#pragma mark ========================类扩展========================
+#pragma mark ========================Extension========================
 @interface CFSecurityCodeButton ()
 
 @property (nonatomic, strong) UIColor *color;
@@ -22,7 +23,7 @@
 
 @end
 
-#pragma mark ========================类实现========================
+#pragma mark ========================Class Implementation========================
 @implementation CFSecurityCodeButton
 
 /**
@@ -61,9 +62,7 @@
 }
 
 - (void)clicked {
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(timing) userInfo:nil repeats:YES];
-    self.enabled = NO;
-    self.tempTime = self.time;
+    [self startTiming];
     
     if ([self.delegate respondsToSelector:@selector(securityCodeButtonDidClicked:)]) {
         [self.delegate securityCodeButtonDidClicked:self];
@@ -71,11 +70,20 @@
     
 }
 
+- (void)startTiming {
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 repeats:YES block:^(NSTimer * _Nonnull timer) {
+        [self timing];
+    }];
+    
+    self.enabled = NO;
+    self.tempTime = self.time;
+}
+
 - (void)timing {
     if (self.tempTime == 0) {
         // 停止计时器
-        [self.timer invalidate];
-        self.timer = nil;
+        [self stopTiming];
+        
         self.enabled = YES;
         self.tempTime = self.time;
         if ([self.delegate respondsToSelector:@selector(securityCodeButtonTimingEnded:)]) {
@@ -84,6 +92,11 @@
     }
     [self setTitle:[NSString stringWithFormat:@"%@(%d)",self.disabledTitle, self.tempTime] forState:UIControlStateDisabled];
     self.tempTime --;
+}
+
+- (void)stopTiming {
+    [self.timer invalidate];
+    self.timer = nil;
 }
 
 - (void)layoutSubviews {

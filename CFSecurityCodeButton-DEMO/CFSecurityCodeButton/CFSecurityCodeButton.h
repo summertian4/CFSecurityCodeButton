@@ -20,7 +20,8 @@
 
 #define CFColor(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
 
-#pragma mark ========================代理协议========================
+#pragma mark ========================Delegate========================
+
 @class CFSecurityCodeButton;
 @protocol CFSecurityCodeButtonDelegate <NSObject>
 
@@ -56,5 +57,11 @@
  *  @return CFSecurityCodeButton对象
  */
 - (instancetype)initWithColor:(UIColor *)buttonColor;
+
+
+/**
+ invalidate NSTimer
+ */
+- (void)stopTiming;
 
 @end

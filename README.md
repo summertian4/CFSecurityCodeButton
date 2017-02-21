@@ -75,6 +75,16 @@ CFSecurityCodeButton是一个简约的验证码按钮。
 	```
 	只需要实现`CFSecurityCodeButtonDelegate`，重写代理方法
 
+6. 为了避免内存泄露：
+
+	```objc
+	/**
+	 invalidate NSTimer
+	 */
+	- (void)stopTiming;
+	```
 
 # 反馈
 如果有什么修改建议，可以发送邮件到coderfish@163.com，也欢迎到[我的博客](http://zhoulingyu.com)
+
+
